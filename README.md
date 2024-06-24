@@ -1,1 +1,2 @@
-# teste
+# Project created to practice react
+
