@@ -11,19 +11,20 @@
     border: 2px solid var(--gray-400);
 }
 
-.checkbox {
-    border: 2px solid var(--blue);
-    width: 1.25rem;
-    height: 1.25rem;
-    border-radius: .625rem;
+.taskDone{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
     background-color: var(--gray-500);
-    margin-top: .125rem;
+    color: var(--gray-300);
+    border-radius: 10px;
+    border: 2px solid var(--gray-400);
+    text-decoration: line-through;
 }
-
-.checkbox:hover {
-    opacity: 70%;
-    cursor: pointer;
-}
+    
 p {
     flex: 1;
 }
@@ -36,5 +37,34 @@ p {
 
 .trash:hover {
     color: var(--danger);
+    cursor: pointer;
+}
+
+.checkBoxEmpty {
+    border: 2px solid var(--blue);
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: .625rem;
+    background-color: var(--gray-500);
+    margin-top: .125rem;
+}
+
+.checkBoxEmpty:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.checkBoxFilled {
+    padding-top: .05rem;
+    border: 0;
+    border-radius: .625rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--purple-dark);
+    margin-top: .125rem;
+}
+
+.checkBoxFilled:hover {
+    background-color: var(--purple);
     cursor: pointer;
 }
