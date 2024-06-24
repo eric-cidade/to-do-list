@@ -26,7 +26,7 @@ export function Task({content, id, status, onDeleteTask, onStatusChange}: TaskPr
             <div className={styles.task}>
                 <button className={styles.checkBoxEmpty} onClick={handleCheckBoxClick}/>
                 <p>{content}</p>
-                <button className={styles.trash}><Trash size={24}/></button>
+                <button className={styles.trash} onClick={handleDeleteTask}><Trash size={24}/></button>
             </div>
         );
     }
