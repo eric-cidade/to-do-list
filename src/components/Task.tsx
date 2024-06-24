@@ -5,7 +5,7 @@ import { Check } from 'phosphor-react';
 interface TaskProps {
     id: number;
     content: string;
-    onDeleteTask: (taskToDelete: string) => void;
+    onDeleteTask: (taskToDelete: number) => void;
     status: string;
     onStatusChange: (taskId: number) => void;
 }
@@ -17,7 +17,7 @@ export function Task({content, id, status, onDeleteTask, onStatusChange}: TaskPr
 
     function handleDeleteTask() {
         console.log("Delete task")
-        onDeleteTask(content);
+        onDeleteTask(id);
     }
 
     if(status==='todo')
