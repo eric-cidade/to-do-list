@@ -16,13 +16,13 @@ export function NewTaskBar({newTask, newTaskChangeHandler, createNewTaskHandler}
         <div className={styles.taskBar}>
             <textarea
                     name='comment' 
-                    placeholder='Adicione uma nova tarefa'
+                    placeholder='Add new task'
                     onChange={newTaskChangeHandler}
                     value={newTask}
                     required
             />
             <button type='submit' disabled={isNewTaskTextEmpty} onClick={createNewTaskHandler}>
-                Criar
+                Create
                 <img className={styles.plus} src={plus} alt="" />
             </button>
         </div>
