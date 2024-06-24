@@ -3,14 +3,15 @@ import { Header } from './components/Header'
 import { NewTaskBar } from './components/NewTaskBar'
 import { TaskFeed } from './components/TaskFeed'
 import { ChangeEvent, useState, FormEvent } from 'react'
+import { v4 as uuidv4} from 'uuid'
 import './global.css'
 
 
 
 const initialTasks = [
-  {id: 1, content:'Terminar DLC Elden Ring', status:'todo'}, 
-  {id: 2, content:'Pegar Mestre no LoL', status:'todo'}, 
-  {id: 3, content:'Terminar projeto to-do-list', status:'todo'}];
+  {content:'Terminar DLC Elden Ring', status:'todo'}, 
+  {content:'Pegar Mestre no LoL', status:'todo'}, 
+  {content:'Terminar projeto to-do-list', status:'todo'}].map(item => ({...item, id: uuidv4()}));
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
   function handleCreateNewTask (event: FormEvent) {
     event.preventDefault();
 
-    setTasks([...tasks, {id: tasks.length + 1, content: newTask, status:'todo'}]);
+    setTasks([...tasks, {content: newTask, status:'todo', id:uuidv4()}]);
     setNewTask('');
   }
   
