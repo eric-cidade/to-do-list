@@ -1,27 +1,27 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, FormEvent } from 'react';
 import plus from '../assets/plus.svg'
 import styles from './NewTaskBar.module.css'
 
+interface NewTaskBarProps {
+    newTask: string;
+    newTaskChangeHandler: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+    createNewTaskHandler: (event: FormEvent) => void;
+}
 
+export function NewTaskBar({newTask, newTaskChangeHandler, createNewTaskHandler}: NewTaskBarProps) {
 
-export function NewTaskBar() {
-    const [newTaskText, setNewTaskText] = useState('')
-
-    const isNewTaskTextEmpty = newTaskText.length === 0;
-
-    function handleNewTaskTextChange(event: ChangeEvent<HTMLTextAreaElement>) {
-        setNewTaskText(event.target.value)
-    }
+    const isNewTaskTextEmpty = newTask.length === 0;
+   
     return (
         <div className={styles.taskBar}>
             <textarea
                     name='comment' 
                     placeholder='Adicione uma nova tarefa'
-                    onChange={handleNewTaskTextChange}
-                    value={newTaskText}
+                    onChange={newTaskChangeHandler}
+                    value={newTask}
                     required
             />
-            <button type='submit' disabled={isNewTaskTextEmpty}>
+            <button type='submit' disabled={isNewTaskTextEmpty} onClick={createNewTaskHandler}>
                 Criar
                 <img className={styles.plus} src={plus} alt="" />
             </button>

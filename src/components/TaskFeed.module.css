@@ -40,3 +40,6 @@
     border-radius: 20px;
     padding: .125rem .75rem;
 }
+.taskFeed {
+    width: 100%;
+}

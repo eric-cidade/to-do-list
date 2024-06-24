@@ -9,6 +9,7 @@
     color: var(--gray-100);
     border-radius: 10px;
     border: 2px solid var(--gray-400);
+    margin-bottom: 1rem;
 }
 
 .taskDone{
@@ -23,6 +24,7 @@
     border-radius: 10px;
     border: 2px solid var(--gray-400);
     text-decoration: line-through;
+    margin-bottom: 1rem;
 }
     
 p {
