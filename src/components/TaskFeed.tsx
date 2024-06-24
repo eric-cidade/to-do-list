@@ -27,7 +27,7 @@ export function TaskFeed({taskList, onDeleteTask, n_tasks, n_tasksCompleted, onS
             <div className={styles.tasksDone}>
                 <p><b>Done</b></p>
                 <div className={styles.number}>
-                    <p>{n_tasksCompleted} de {n_tasks}</p>
+                    <p>{n_tasksCompleted} of {n_tasks}</p>
                 </div>
             </div>   
         </div>
