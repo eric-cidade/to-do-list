@@ -5,14 +5,14 @@ import Clipboard from '../assets/Clipboard.svg'
 interface task {
     content: string;
     status: string;
-    id: number;
+    id: string;
 }
 interface TaskFeedProps {
     taskList: task[];
-    onDeleteTask: (id: number) => void;
+    onDeleteTask: (id: string) => void;
     n_tasks: number;
     n_tasksCompleted: number
-    onStatusChange: (taskId : number) => void;
+    onStatusChange: (taskId : string) => void;
 }
 export function TaskFeed({taskList, onDeleteTask, n_tasks, n_tasksCompleted, onStatusChange}: TaskFeedProps) {
     return (

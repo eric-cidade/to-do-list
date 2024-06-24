@@ -3,11 +3,11 @@ import { Trash } from 'phosphor-react';
 import { Check } from 'phosphor-react';
 
 interface TaskProps {
-    id: number;
+    id: string;
     content: string;
-    onDeleteTask: (taskToDelete: number) => void;
+    onDeleteTask: (taskToDelete: string) => void;
     status: string;
-    onStatusChange: (taskId: number) => void;
+    onStatusChange: (taskId: string) => void;
 }
 export function Task({content, id, status, onDeleteTask, onStatusChange}: TaskProps) {
 
