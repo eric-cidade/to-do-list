@@ -9,7 +9,7 @@ interface task {
 }
 interface TaskFeedProps {
     taskList: task[];
-    onDeleteTask: (content: string) => void;
+    onDeleteTask: (id: number) => void;
     n_tasks: number;
     n_tasksCompleted: number
     onStatusChange: (taskId : number) => void;
