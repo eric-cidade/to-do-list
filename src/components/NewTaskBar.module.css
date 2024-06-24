@@ -1,0 +1,44 @@
+.taskBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1rem;
+    z-index: 10;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.taskBar textarea{
+    background-color: var(--gray-400);
+    border-radius: 5px;
+    color: var(--gray-300);
+    outline: 1px solid #000;
+    border: 0;
+    resize: none;
+    height: 2.5rem;
+    line-height: 1.5rem;
+    padding: .5rem;
+    
+    width: 100%;
+
+}
+
+.taskBar button[type=submit] {
+    height: 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    color: var(--gray-100);
+    background-color: var(--blue-dark);
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+}
+
+.taskBar button[type=submit]:hover {
+    background-color: var(--blue);
+}
