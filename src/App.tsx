@@ -18,7 +18,7 @@ function App() {
   const [tasks, setTasks] = useState(initialTasks)
   const [newTask, setNewTask] = useState('')
   
-  function changeStatus(taskId: number) {
+  function changeStatus(taskId: string) {
     setTasks(prevTasks => prevTasks.map(task =>
       task.id === taskId ? {...task, status: task.status === 'todo' ? 'done' : 'todo'} : task
       )
@@ -38,7 +38,7 @@ function App() {
   }
   
 
-  function deleteTask (taskToDelete: number) {
+  function deleteTask (taskToDelete: string) {
     const newTasks = tasks.filter(task => {return task.id != taskToDelete});
     setTasks(newTasks);
   }
